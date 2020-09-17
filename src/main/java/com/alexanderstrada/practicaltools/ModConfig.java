@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Alexander Strada - MIT License (This header, with links, must not be removed)
+// Copyright (c) 2020 Alexander Strada - MIT License (This header, with links, must not be removed)
 //     https://github.com/astradamus/PracticalTools
 //     https://curseforge.com/minecraft/mc-mods/practical-tools
 //     https://twitch.tv/neurodr0me
@@ -7,8 +7,11 @@ package com.alexanderstrada.practicaltools;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 
+import java.util.Random;
+
 public class ModConfig {
 
+    public static final Random random = new Random();
     public static Common COMMON;
 
     public static ForgeConfigSpec init(ForgeConfigSpec.Builder builder) {

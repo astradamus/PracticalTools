@@ -1,12 +1,12 @@
-// Copyright (c) 2019 Alexander Strada - MIT License (This header, with links, must not be removed)
+// Copyright (c) 2020 Alexander Strada - MIT License (This header, with links, must not be removed)
 //     https://github.com/astradamus/PracticalTools
 //     https://curseforge.com/minecraft/mc-mods/practical-tools
 //     https://twitch.tv/neurodr0me
 
 package com.alexanderstrada.practicaltools.items;
 
+import com.alexanderstrada.practicaltools.AreaBreak;
 import com.alexanderstrada.practicaltools.ModConfig;
-import com.alexanderstrada.practicaltools.ToolFunctions;
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -40,10 +40,10 @@ public class HammerItem extends PickaxeItem {
 
     @Override
     public boolean onBlockDestroyed(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity entityLiving) {
-        stack.attemptDamageItem(ModConfig.COMMON.hammerDuraLossMulti.get()-1, ToolFunctions.random, null);
+        stack.attemptDamageItem(ModConfig.COMMON.hammerDuraLossMulti.get()-1, ModConfig.random, null);
 
         if (entityLiving instanceof PlayerEntity)
-            ToolFunctions.attemptBreakNeighbors(world, pos, (PlayerEntity) entityLiving, EFFECTIVE_ON, EFFECTIVE_MATERIALS, true);
+            AreaBreak.areaAttempt(world, pos, (PlayerEntity) entityLiving, EFFECTIVE_ON, EFFECTIVE_MATERIALS, true);
 
         return super.onBlockDestroyed(stack, world, state, pos, entityLiving);
     }
