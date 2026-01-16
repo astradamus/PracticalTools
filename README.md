@@ -15,5 +15,3 @@ Each tool comes in iron, gold, and diamond variants (***and now, in 1.16, Nether
 The greataxe boasts a more accurate tree detection method than I've seen in previous mods, and should never leave floating treetops.
 
 Inspired by the many mods that implement these tools in previous versions of MC, my goal was to make 1.14 a little less vanilla so mod-addicts like myself can finally explore the new features added since 1.12!
-
-Also, here's a shameless plug for my Twitch stream :) https://twitch.tv/neurodr0me
